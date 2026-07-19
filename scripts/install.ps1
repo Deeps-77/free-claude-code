@@ -562,11 +562,6 @@ Assert-NoFccProcessesRunning
 Write-Step "Ensuring Claude Code is installed"
 Ensure-ClaudeCode
 
-Write-Step "Ensuring Codex is installed"
-Ensure-Codex
-
-Write-Step "Ensuring Pi is installed"
-Ensure-Pi
 
 Write-Step "Ensuring uv $MinUvVersion or newer is installed"
 Ensure-Uv
@@ -584,6 +579,4 @@ if ($DryRun) {
 else {
     Write-Host "Free Claude Code is installed and verified. Start the proxy with: fcc-server"
     Write-Host "Run Claude Code with: fcc-claude"
-    Write-Host "Run Codex with: fcc-codex"
-    Write-Host "Run Pi with: fcc-pi"
 }
